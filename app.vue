@@ -46,7 +46,7 @@ const tapOnBoardingScreen = () => {
     <div>click or tap anywhere to continue</div>
   </div>
   <div class="screen w-full min-h-screen flex flex-col overflow-hidden text-gray-100 font-sans">
-    <Countdown class="rainbow-border fixed ml-4 mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-xl px-4 py-2 font-mono text-lg font-bold" />
+    <Countdown class="z-10 rainbow-border fixed ml-4 mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-xl px-4 py-2 font-mono text-sm md:text-lg font-bold" />
     <div class="absolute w-screen h-screen overflow-hidden">
       <div class="moon">
         <div class="orbit"></div>

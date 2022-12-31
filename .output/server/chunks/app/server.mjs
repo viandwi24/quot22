@@ -750,7 +750,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         _push(`<!---->`);
       }
       _push(`<div class="screen w-full min-h-screen flex flex-col overflow-hidden text-gray-100 font-sans">`);
-      _push(ssrRenderComponent(_component_Countdown, { class: "rainbow-border fixed ml-4 mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-xl px-4 py-2 font-mono text-lg font-bold" }, null, _parent));
+      _push(ssrRenderComponent(_component_Countdown, { class: "z-10 rainbow-border fixed ml-4 mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-xl px-4 py-2 font-mono text-sm md:text-lg font-bold" }, null, _parent));
       _push(`<div class="absolute w-screen h-screen overflow-hidden"><div class="moon"><div class="orbit"></div></div><!--[-->`);
       ssrRenderList(10, (i) => {
         _push(`<div class="firework"></div>`);
@@ -785,7 +785,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.8ce93dbe.mjs').then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.f94758f5.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     provide("_route", useRoute());
