@@ -735,7 +735,17 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       ["ga menang ga tidur, 3 kali menang buka skin", "tia esport member"],
       ["tidak peduli nilai A, bertemu tunangan adalah keharusan", "tunangan ldr"],
       ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"],
-      ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"]
+      ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"],
+      ["Anak ti masa ngecor jalan", "grand master of ti"],
+      ["kalian buat tugas akhir biar tau real dunia kerja", "dosen summoner rift"],
+      ["saya hanyalah orang miskin, hanya punya satu mobil, 1pc, dan beberapa apartemen", "mas mas reseller parfum"],
+      ["Said by someone who own a honda civic 2022", "ubex ini bos"],
+      ["bukan gw yang ngomong", "gelen yang ngomong"],
+      ["aku enjoy meski masih menjadi tuna asmara", "gigachad batam"],
+      ["apa daya cuman mas mas biasa", "pemutar jam tangan"],
+      ["saran yang bagus tapi saya cinta lokal", "deket dengan juragan jember"],
+      ["y", "scared of admin grup"],
+      ["ojo sering gelem dijaluk i tulung", "tom friend"]
     ];
     const randomQuotes = () => quotes.sort(() => Math.random() - 0.5);
     const ytframe = ref(null);
@@ -745,7 +755,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_Countdown = _sfc_main$2;
       _push(`<!--[-->`);
       if (unref(showOnBoardingScreen)) {
-        _push(`<div class="w-full h-full bg-slate-900 fixed top-0 left-0 z-50 flex flex-col justify-center items-center font-mono"><div class="text-4xl font-bold mb-4">HAPPY NEW YEAR 2023!!!</div><div>click or tap anywhere to continue</div></div>`);
+        _push(`<div class="w-full h-full bg-slate-900 fixed top-0 left-0 z-50 flex flex-col justify-center items-center font-mono"><div class="text-4xl font-bold mb-4">SMIL:3</div><div>click or tap anywhere to continue</div></div>`);
       } else {
         _push(`<!---->`);
       }
@@ -785,7 +795,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.f94758f5.mjs').then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.291c0c80.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     provide("_route", useRoute());

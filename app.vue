@@ -22,7 +22,15 @@ const quotes = [
   ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"],
   ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"],
   ["Anak ti masa ngecor jalan", "grand master of ti"],
-  ["kalian buat tugas akhir biar tau real dunia kerja", "dosen summoner rift"]
+  ["kalian buat tugas akhir biar tau real dunia kerja", "dosen summoner rift"],
+  ["saya hanyalah orang miskin, hanya punya satu mobil, 1pc, dan beberapa apartemen", "mas mas reseller parfum"],
+  ["Said by someone who own a honda civic 2022", "ubex ini bos"],
+  ["bukan gw yang ngomong", "gelen yang ngomong"],
+  ["aku enjoy meski masih menjadi tuna asmara", "gigachad batam"],
+  ["apa daya cuman mas mas biasa", "pemutar jam tangan"],
+  ["saran yang bagus tapi saya cinta lokal", "deket dengan juragan jember"],
+  ["y", "scared of admin grup"],
+  ["ojo sering gelem dijaluk i tulung", "tom friend"]
 ]
 const randomQuotes = () => quotes.sort(() => Math.random() - 0.5)
 
@@ -88,7 +96,7 @@ const tapOnBoardingScreen = () => {
 <style lang="scss">
 .running-flex {
   animation-name: example;
-  animation-duration: 60s;
+  animation-duration: 75s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
