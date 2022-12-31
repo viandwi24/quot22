@@ -20,7 +20,9 @@ const quotes = [
   ["ga menang ga tidur, 3 kali menang buka skin", "tia esport member"],
   ["tidak peduli nilai A, bertemu tunangan adalah keharusan", "tunangan ldr"],
   ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"],
-  ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"]
+  ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"],
+  ["Anak ti masa ngecor jalan", "grand master of ti"],
+  ["kalian buat tugas akhir biar tau real dunia kerja", "dosen summoner rift"]
 ]
 const randomQuotes = () => quotes.sort(() => Math.random() - 0.5)
 
@@ -42,7 +44,7 @@ const tapOnBoardingScreen = () => {
 
 <template>
   <div v-if="showOnBoardingScreen" class="w-full h-full bg-slate-900 fixed top-0 left-0 z-50 flex flex-col justify-center items-center font-mono" @click="tapOnBoardingScreen">
-    <div class="text-4xl font-bold mb-4">HAPPY NEW YEAR 2023!!!</div>
+    <div class="text-4xl font-bold mb-4">SMIL:3</div>
     <div>click or tap anywhere to continue</div>
   </div>
   <div class="screen w-full min-h-screen flex flex-col overflow-hidden text-gray-100 font-sans">
