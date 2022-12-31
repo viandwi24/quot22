@@ -745,7 +745,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       ["apa daya cuman mas mas biasa", "pemutar jam tangan"],
       ["saran yang bagus tapi saya cinta lokal", "deket dengan juragan jember"],
       ["y", "scared of admin grup"],
-      ["ojo sering gelem dijaluk i tulung", "tom friend"]
+      ["ojo sering gelem dijaluk i tulung", "tom friend"],
+      ["Barang siapa yang percaya kepada manusia, maka Ia harus siap untuk kecewa", "kvm user"]
     ];
     const randomQuotes = () => quotes.sort(() => Math.random() - 0.5);
     const ytframe = ref(null);
@@ -779,7 +780,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         height: "96px",
         ref_key: "ytframe",
         ref: ytframe,
-        src: "https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"
+        src: "https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&vq=small&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"
       }, null, _parent));
       _push(`<div class="absolute top-0 left-0 w-full h-full bg-black/30"></div></div><div class="flex-1 flex flex-col justify-center"><div class="font-bold text-sm mb-1">\u5973\u306E\u5B50\u306F\u5F37\u3044\uFF0F\u9AD8\u5DBA\u306E\u306A\u3067\u3057\u3053</div><div class="text-xs -ml-2">\u3010HoneyWorks\u3011</div></div></div><div class="tso-rainbow"></div></div><!--]-->`);
     };
@@ -795,7 +796,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.291c0c80.mjs').then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.df387af9.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     provide("_route", useRoute());

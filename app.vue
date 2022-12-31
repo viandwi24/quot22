@@ -30,7 +30,8 @@ const quotes = [
   ["apa daya cuman mas mas biasa", "pemutar jam tangan"],
   ["saran yang bagus tapi saya cinta lokal", "deket dengan juragan jember"],
   ["y", "scared of admin grup"],
-  ["ojo sering gelem dijaluk i tulung", "tom friend"]
+  ["ojo sering gelem dijaluk i tulung", "tom friend"],
+  ["Barang siapa yang percaya kepada manusia, maka Ia harus siap untuk kecewa", "kvm user"]
 ]
 const randomQuotes = () => quotes.sort(() => Math.random() - 0.5)
 
@@ -81,7 +82,7 @@ const tapOnBoardingScreen = () => {
     <div class="fixed bottom-0 left-0 z-30 w-full lg:w-96 h-24 flex space-x-4 md:mb-4 md:ml-4 bg-slate-700/80 backdrop-blur-3xl overflow-hidden md:rounded-lg">
       <div class="w-1/3 overflow-hidden relative flex justify-center items-center">
         <!-- <iframe id="ytframe" ref="ytframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/en">youtubeembedcode en</a></small></div><div><small><a href="https://skattefrittcasino.com/">skattefrittcasino.com</a></small></div></iframe> -->
-        <YouTube width="146px " height="96px" ref="ytframe" src="https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" />
+        <YouTube width="146px " height="96px" ref="ytframe" src="https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&vq=small&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" />
         <div class="absolute top-0 left-0 w-full h-full bg-black/30"></div>
       </div>
       <div class="flex-1 flex flex-col justify-center">
