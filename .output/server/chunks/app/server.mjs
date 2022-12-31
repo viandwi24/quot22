@@ -1,4 +1,4 @@
-import { getCurrentInstance, version, useSSRContext, defineComponent, computed, ref, h, resolveComponent, reactive, unref, createApp, toRef, isRef, defineAsyncComponent, provide, onErrorCaptured, inject } from 'vue';
+import { getCurrentInstance, version, useSSRContext, defineComponent, computed, ref, h, resolveComponent, reactive, onUnmounted, unref, createApp, toRef, isRef, defineAsyncComponent, provide, onErrorCaptured, inject } from 'vue';
 import { $fetch } from 'ofetch';
 import { createHooks } from 'hookable';
 import { getContext } from 'unctx';
@@ -6,7 +6,7 @@ import { hasProtocol, isEqual, parseURL, joinURL, stringifyParsedURL, stringifyQ
 import { createError as createError$1, sendRedirect } from 'h3';
 import { useHead, createHead as createHead$1 } from '@unhead/vue';
 import { renderDOMHead, debouncedRenderDOMHead } from '@unhead/dom';
-import { ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderComponent, ssrRenderSuspense } from 'vue/server-renderer';
+import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrRenderSuspense } from 'vue/server-renderer';
 import YouTube from 'vue3-youtube';
 import { a as useRuntimeConfig$1 } from '../nitro/node-server.mjs';
 import 'node-fetch-native/polyfill';
@@ -681,6 +681,38 @@ const _plugins = [
   node_modules__pnpm_nuxt_643_0_0_sass_641_57_1_node_modules_nuxt_dist_head_runtime_lib_vueuse_head_plugin_mjs_8t20WwNN4p,
   node_modules__pnpm_nuxt_643_0_0_sass_641_57_1_node_modules_nuxt_dist_app_plugins_router_mjs_X03863Wsgl
 ];
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+  __name: "Countdown",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const countdown = ref({
+      days: "00",
+      hours: "00",
+      minutes: "00",
+      seconds: "00",
+      months: "00",
+      years: "1000"
+    });
+    const isNewYear = ref(false);
+    onUnmounted(() => {
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(_attrs)}>`);
+      if (!unref(isNewYear)) {
+        _push(`<div><span>- </span><span>${ssrInterpolate(unref(countdown).hours)}</span><span>:</span><span>${ssrInterpolate(unref(countdown).minutes)}</span><span>:</span><span>${ssrInterpolate(unref(countdown).seconds)}</span></div>`);
+      } else {
+        _push(`<div class="flex space-x-1"><span class="text-red-500">Happy</span><span class="text-green-500">New</span><span class="text-teal-500">Year</span><span class="text-yellow-500">2023</span><span class="text-blue-500">!!!</span></div>`);
+      }
+      _push(`</div>`);
+    };
+  }
+});
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Countdown.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
@@ -692,7 +724,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       ["semua itu tergantung perspektif berapa persen", "bogor boy"],
       ["siap2 midnight programming.", "bapak penjoki I"],
       ["saya suka demokrasi, tapi kita vote dulu. tetap suara saya", "bapak pemanggil peserta zoom"],
-      ["gapapa jelek, yang penting ngoding", "supraboy"],
+      ["ga ganteng gpp, yang penting bisa ngoding", "supraboy"],
       ["gapapa wibu, minimal mandi", "leader of gdsc"],
       ["hidup harus ber komitmen", "mas mas sadboy batam"],
       ["yang terpenting itu membangun koneksi", "mas mas penjual parfum"],
@@ -702,20 +734,24 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       ["jangan kosongkan hatimu, karena mixue menempati ruko", "bos gotod"],
       ["ga menang ga tidur, 3 kali menang buka skin", "tia esport member"],
       ["tidak peduli nilai A, bertemu tunangan adalah keharusan", "tunangan ldr"],
-      ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"]
+      ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"],
+      ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"]
     ];
     const randomQuotes = () => quotes.sort(() => Math.random() - 0.5);
     const ytframe = ref(null);
     const showOnBoardingScreen = ref(true);
     ref(false);
     return (_ctx, _push, _parent, _attrs) => {
+      const _component_Countdown = _sfc_main$2;
       _push(`<!--[-->`);
       if (unref(showOnBoardingScreen)) {
-        _push(`<div class="w-full h-full bg-slate-900 fixed top-0 left-0 z-50 flex flex-col justify-center items-center font-mono"><div class="text-4xl font-bold mb-4">HAPPY NEW YEAR!!!</div><div>click or tap anywhere to continue</div></div>`);
+        _push(`<div class="w-full h-full bg-slate-900 fixed top-0 left-0 z-50 flex flex-col justify-center items-center font-mono"><div class="text-4xl font-bold mb-4">HAPPY NEW YEAR 2023!!!</div><div>click or tap anywhere to continue</div></div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="screen w-full min-h-screen flex flex-col overflow-hidden text-gray-100 font-sans"><div class="absolute w-screen h-screen overflow-hidden"><div class="moon"><div class="orbit"></div></div><!--[-->`);
+      _push(`<div class="screen w-full min-h-screen flex flex-col overflow-hidden text-gray-100 font-sans">`);
+      _push(ssrRenderComponent(_component_Countdown, { class: "rainbow-border fixed ml-4 mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-xl px-4 py-2 font-mono text-lg font-bold" }, null, _parent));
+      _push(`<div class="absolute w-screen h-screen overflow-hidden"><div class="moon"><div class="orbit"></div></div><!--[-->`);
       ssrRenderList(10, (i) => {
         _push(`<div class="firework"></div>`);
       });
@@ -727,7 +763,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         });
         _push(`<!--]--></div>`);
       });
-      _push(`<!--]--></div></div><div class="fixed bottom-0 left-0 z-30 w-full lg:w-96 h-24 flex space-x-4 md:mb-4 md:ml-4 bg-slate-700/80 backdrop-blur-3xl overflow-hidden rounded-lg"><div class="w-1/3 overflow-hidden relative flex justify-center items-center">`);
+      _push(`<!--]--></div></div><div class="fixed bottom-0 left-0 z-30 w-full lg:w-96 h-24 flex space-x-4 md:mb-4 md:ml-4 bg-slate-700/80 backdrop-blur-3xl overflow-hidden md:rounded-lg"><div class="w-1/3 overflow-hidden relative flex justify-center items-center">`);
       _push(ssrRenderComponent(unref(YouTube), {
         width: "146px ",
         height: "96px",
@@ -749,7 +785,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.f01c015b.mjs').then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.8ce93dbe.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     provide("_route", useRoute());

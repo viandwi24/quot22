@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import YouTube from 'vue3-youtube';
+import YouTube from 'vue3-youtube'
 
+// QUOTES
 const quotes = [
   ["tidak ada yang salah dan benar, tergantung sudut pandang", "mas mas pemodif mobil"],
   ["jika tidak tau apa - apa mending diam", "penggeber cbr"],
@@ -8,7 +9,7 @@ const quotes = [
   ["semua itu tergantung perspektif berapa persen", "bogor boy"],
   ["siap2 midnight programming.", "bapak penjoki I"],
   ["saya suka demokrasi, tapi kita vote dulu. tetap suara saya", "bapak pemanggil peserta zoom"],
-  ["gapapa jelek, yang penting ngoding", "supraboy"],
+  ["ga ganteng gpp, yang penting bisa ngoding", "supraboy"],
   ["gapapa wibu, minimal mandi", "leader of gdsc"],
   ["hidup harus ber komitmen", "mas mas sadboy batam"],
   ["yang terpenting itu membangun koneksi", "mas mas penjual parfum"],
@@ -18,16 +19,15 @@ const quotes = [
   ["jangan kosongkan hatimu, karena mixue menempati ruko", "bos gotod"],
   ["ga menang ga tidur, 3 kali menang buka skin", "tia esport member"],
   ["tidak peduli nilai A, bertemu tunangan adalah keharusan", "tunangan ldr"],
-  ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"]
+  ["jika bisa ambil 2 banyak uang, kenapa tidak?", "bapak pembina msib"],
+  ["kalau merasa ga semangat mungkin harus berkomitmen dulu", "penjaga lab jarkom"]
 ]
-
 const randomQuotes = () => quotes.sort(() => Math.random() - 0.5)
 
-// simulate click to play video
+// MUSIC
 const ag2ytControl = function(ytframe?: HTMLIFrameElement, action?: string, arg=null){
   ytframe?.contentWindow?.postMessage('{"event":"command", "func":"'+action+'", "args":'+arg+'}', '*');
 }
-
 const ytframe = ref(null)
 const showOnBoardingScreen = ref(true)
 const ytstate = ref(false)
@@ -42,10 +42,11 @@ const tapOnBoardingScreen = () => {
 
 <template>
   <div v-if="showOnBoardingScreen" class="w-full h-full bg-slate-900 fixed top-0 left-0 z-50 flex flex-col justify-center items-center font-mono" @click="tapOnBoardingScreen">
-    <div class="text-4xl font-bold mb-4">HAPPY NEW YEAR!!!</div>
+    <div class="text-4xl font-bold mb-4">HAPPY NEW YEAR 2023!!!</div>
     <div>click or tap anywhere to continue</div>
   </div>
   <div class="screen w-full min-h-screen flex flex-col overflow-hidden text-gray-100 font-sans">
+    <Countdown class="rainbow-border fixed ml-4 mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-xl px-4 py-2 font-mono text-lg font-bold" />
     <div class="absolute w-screen h-screen overflow-hidden">
       <div class="moon">
         <div class="orbit"></div>
@@ -67,7 +68,7 @@ const tapOnBoardingScreen = () => {
         </div>
       </div>
     </div>
-    <div class="fixed bottom-0 left-0 z-30 w-full lg:w-96 h-24 flex space-x-4 md:mb-4 md:ml-4 bg-slate-700/80 backdrop-blur-3xl overflow-hidden rounded-lg">
+    <div class="fixed bottom-0 left-0 z-30 w-full lg:w-96 h-24 flex space-x-4 md:mb-4 md:ml-4 bg-slate-700/80 backdrop-blur-3xl overflow-hidden md:rounded-lg">
       <div class="w-1/3 overflow-hidden relative flex justify-center items-center">
         <!-- <iframe id="ytframe" ref="ytframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/en">youtubeembedcode en</a></small></div><div><small><a href="https://skattefrittcasino.com/">skattefrittcasino.com</a></small></div></iframe> -->
         <YouTube width="146px " height="96px" ref="ytframe" src="https://www.youtube.com/embed/edid66UmfiQ?autoplay=1&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" />

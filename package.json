@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.2.0",
+    "moment": "^2.29.4",
     "sass": "^1.57.1",
     "vue3-youtube": "^0.1.9"
   }
