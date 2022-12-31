@@ -2,7 +2,7 @@ const client_manifest = {
   "node_modules/.pnpm/nuxt@3.0.0_sass@1.57.1/node_modules/nuxt/dist/app/entry.mjs": {
     "resourceType": "script",
     "module": true,
-    "file": "entry.0a9cb76f.js",
+    "file": "entry.5c80f641.js",
     "src": "node_modules/.pnpm/nuxt@3.0.0_sass@1.57.1/node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -19,7 +19,7 @@ const client_manifest = {
   "virtual:nuxt:/home/viandwi24/Project/Dev/quot22/.nuxt/error-component.mjs": {
     "resourceType": "script",
     "module": true,
-    "file": "error-component.d029a269.js",
+    "file": "error-component.0d35ce3d.js",
     "src": "virtual:nuxt:/home/viandwi24/Project/Dev/quot22/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -33,12 +33,12 @@ const client_manifest = {
   "node_modules/.pnpm/@nuxt+ui-templates@1.0.0/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "error-404.538611c1.js",
+    "file": "error-404.23523632.js",
     "src": "node_modules/.pnpm/@nuxt+ui-templates@1.0.0/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/.pnpm/nuxt@3.0.0_sass@1.57.1/node_modules/nuxt/dist/app/entry.mjs",
-      "__plugin-vue_export-helper.dbdcb274.js"
+      "__plugin-vue_export-helper.c75c1f8f.js"
     ],
     "css": []
   },
@@ -46,10 +46,10 @@ const client_manifest = {
     "file": "error-404.a19a4ebd.css",
     "resourceType": "style"
   },
-  "__plugin-vue_export-helper.dbdcb274.js": {
+  "__plugin-vue_export-helper.c75c1f8f.js": {
     "resourceType": "script",
     "module": true,
-    "file": "_plugin-vue_export-helper.dbdcb274.js",
+    "file": "_plugin-vue_export-helper.c75c1f8f.js",
     "imports": [
       "node_modules/.pnpm/nuxt@3.0.0_sass@1.57.1/node_modules/nuxt/dist/app/entry.mjs"
     ]
@@ -57,11 +57,11 @@ const client_manifest = {
   "node_modules/.pnpm/@nuxt+ui-templates@1.0.0/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "error-500.14287755.js",
+    "file": "error-500.724f8814.js",
     "src": "node_modules/.pnpm/@nuxt+ui-templates@1.0.0/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
-      "__plugin-vue_export-helper.dbdcb274.js",
+      "__plugin-vue_export-helper.c75c1f8f.js",
       "node_modules/.pnpm/nuxt@3.0.0_sass@1.57.1/node_modules/nuxt/dist/app/entry.mjs"
     ],
     "css": []

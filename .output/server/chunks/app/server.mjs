@@ -498,7 +498,7 @@ function createHead(initHeadObject) {
   return legacyHead;
 }
 version.startsWith("2.");
-const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [], "style": [], "script": [], "noscript": [] };
+const appHead = { "meta": [{ "charset": "utf-8" }, { "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "hid": "description", "name": "description", "content": "a collection of the best quotes from the 2022 TI. Happy New Year 2023!!!" }, { "hid": "og:title", "property": "og:title", "content": "BEST QUOTES OF TI 2022" }, { "hid": "og:description", "property": "og:description", "content": "a collection of the best quotes from the 2022 TI. Happy New Year 2023!!!" }, { "hid": "og:type", "property": "og:type", "content": "website" }, { "hid": "og:url", "property": "og:url", "content": "https://quot22.viandwi24.site/" }], "link": [], "style": [], "script": [], "noscript": [], "title": "BEST QUOTES OF TI 2022" };
 const node_modules__pnpm_nuxt_643_0_0_sass_641_57_1_node_modules_nuxt_dist_head_runtime_lib_vueuse_head_plugin_mjs_8t20WwNN4p = defineNuxtPlugin((nuxtApp) => {
   const head = createHead();
   head.push(appHead);
@@ -749,7 +749,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.a5389ee8.mjs').then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.f01c015b.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     provide("_route", useRoute());
